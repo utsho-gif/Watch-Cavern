@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useReview from "../../hook/useReview";
 import image from "../../image/45mm-clover-sport-band-mockup-close-up.jpg";
 import Reviews from "../Reviews/Reviews";
@@ -6,6 +7,10 @@ import "./Home.css";
 
 const Home = () => {
   const [reviews, setReviews] = useReview();
+  const navigator = useNavigate();
+  const clickHandler = () => {
+    navigator("/reviews");
+  };
   return (
     <div>
       <div className="container">
@@ -26,13 +31,17 @@ const Home = () => {
         </div>
       </div>
       <div className="review-container my-5">
-        <u><h2 className="name">Customer Review</h2></u>
+        <u>
+          <h2 className="name">Customer Review</h2>
+        </u>
         <div className="container">
           {reviews.slice(0, 3).map((review) => (
             <Reviews key={review.id} review={review}></Reviews>
           ))}
         </div>
-        <button className="btn btn-outline-dark">Check Out Reviews</button>
+        <button onClick={clickHandler} className="btn btn-outline-dark">
+          Check Out Reviews
+        </button>
       </div>
     </div>
   );

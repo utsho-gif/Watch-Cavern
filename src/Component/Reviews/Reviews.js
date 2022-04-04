@@ -6,6 +6,7 @@ const Reviews = ({review}) => {
         <div className='col'>
             <h2>{name}</h2>
             <img src={image} alt="" />
+            <p>{gender}</p>
             <p>{comment}</p>
         </div>
     );

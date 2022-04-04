@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import ReviewDetail from './Component/ReviewDetail/ReviewDetail';
 import Header from './Component/Header/Header';
 import NotFound from './Component/NotFound/NotFound';
+import Dashboard from './Component/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/reviews' element={<ReviewDetail></ReviewDetail>}></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
