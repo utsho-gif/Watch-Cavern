@@ -10,9 +10,9 @@ const Home = () => {
     <div>
       <div className="container">
         <div className="details-container me-5">
-          <h2>
+          <h1>
             <span className="text-danger">Watch</span> Dean
-          </h2>
+          </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo porro
             asperiores error voluptatum natus nisi molestias iste ratione
@@ -26,12 +26,13 @@ const Home = () => {
         </div>
       </div>
       <div className="review-container my-5">
-        <h2 className="text-primary">Customer Review</h2>
+        <u><h2 className="name">Customer Review</h2></u>
         <div className="container">
           {reviews.slice(0, 3).map((review) => (
             <Reviews key={review.id} review={review}></Reviews>
           ))}
         </div>
+        <button className="btn btn-outline-dark">Check Out Reviews</button>
       </div>
     </div>
   );

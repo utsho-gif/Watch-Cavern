@@ -4,8 +4,12 @@
     align-items: center;
     margin: 50px;
 }
-.image-container{
-}
 .image-container img{
     width: 500px;
+}
+.name{
+    color: #120E43;
+}
+u{
+    color: #120E43;
 }
