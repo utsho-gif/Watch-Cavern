@@ -3,7 +3,7 @@ import React from 'react';
 const Reviews = ({review}) => {
     const {name, gender, comment, image} = review;
     return (
-        <div className='col'>
+        <div className='col p-3 border border-primary me-3'>
             <h2>{name}</h2>
             <img src={image} alt="" />
             <p>{gender}</p>

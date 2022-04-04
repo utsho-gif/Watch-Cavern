@@ -1,21 +1,21 @@
-import React, { useEffect, useState, PureComponent } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Area,
   AreaChart,
-  Line,
-  LineChart,
-  ResponsiveContainer,
   XAxis,
   YAxis,
   Tooltip,
-  PieChart,
-  Pie,
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
   Radar,
   Legend,
+  RadialBarChart,
+  RadialBar,
+  BarChart,
+  CartesianGrid,
+  Bar,
 } from "recharts";
 
 const Dashboard = () => {
@@ -27,8 +27,9 @@ const Dashboard = () => {
       .then((data) => setDatas(data));
   }, []);
   return (
-    <div>
-      <div>
+    <div className="d-flex flex-column align-items-center my-5 container">
+      <div className="p-5">
+        <h3 className="text-info">Month vs Sell</h3>
         <AreaChart
           width={730}
           height={250}
@@ -47,7 +48,8 @@ const Dashboard = () => {
           <Legend></Legend>
         </AreaChart>
       </div>
-      <div>
+      <div className="p-5">
+        <h3 className="text-warning">Investment vs Revenue</h3>
         <RadarChart outerRadius={90} width={730} height={250} data={datas}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
@@ -76,6 +78,47 @@ const Dashboard = () => {
           <Tooltip></Tooltip>
           <Legend />
         </RadarChart>
+      </div>
+      <div className="p-5">
+        <h3 className="text-success">Total Sell</h3>
+        <RadialBarChart
+          width={730}
+          height={250}
+          innerRadius="10%"
+          outerRadius="80%"
+          data={datas}
+          startAngle={180}
+          endAngle={0}
+        >
+          <RadialBar
+            minAngle={15}
+            label={{ fill: "#666", position: "insideStart" }}
+            background
+            clockWise={true}
+            dataKey="sell"
+          />
+          <Legend
+            iconSize={10}
+            width={120}
+            height={140}
+            layout="vertical"
+            verticalAlign="middle"
+            align="right"
+          />
+          <Tooltip />
+        </RadialBarChart>
+      </div>
+      <div className="p-5">
+        <h3 className="text-danger">Yearly Dashboard</h3>
+        <BarChart width={730} height={250} data={datas}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="investment" fill="#8884d8" />
+          <Bar dataKey="revenue" fill="#82ca9d" />
+        </BarChart>
       </div>
     </div>
   );
