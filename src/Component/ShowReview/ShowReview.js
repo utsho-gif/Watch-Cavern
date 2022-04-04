@@ -1,10 +1,11 @@
 import React from 'react';
-import {AiFillStar, AiOutlineStar} from 'react-icons/ai'
+import {AiFillStar, AiOutlineStar} from 'react-icons/ai';
+import './ShowReview.css'
 
 const showReview = ({review}) => {
     const {name, image, comment} = review;
     return (
-        <div className='shadow-lg m-2 p-5 bg-body rounded'>
+        <div className='shadow-lg m-2 p-5 bg-body rounded store'>
             <img className='mb-2' src={image} alt="" />
             <h4>{name}</h4>
             <p>{comment}</p>
