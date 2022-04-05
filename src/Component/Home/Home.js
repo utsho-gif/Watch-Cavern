@@ -13,7 +13,7 @@ const Home = () => {
   };
   return (
     <div>
-      <div className="container mb-4">
+      <div className="container mb-4 resp">
         <div className="details-container me-5">
           <h1>
             <span className="text-danger">Watch</span> Cavern.
@@ -32,7 +32,7 @@ const Home = () => {
         <u className="mt-5">
           <h2 className="name mt-5">Customer Review</h2>
         </u>
-        <div className="container">
+        <div className="container respon">
           {reviews.slice(0, 3).map((review) => (
             <Reviews key={review.id} review={review}></Reviews>
           ))}

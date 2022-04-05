@@ -16,3 +16,23 @@ u{
     color: #120E43;
     margin-top: 5px;
 }
+.resp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.respon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 720px) {
+    .resp{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .respon{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
