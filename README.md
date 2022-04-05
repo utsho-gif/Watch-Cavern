@@ -21,7 +21,8 @@ Project descriptions are given below:
 * Then Dashboard page where we're tried to see all the transaction from past years by various kind of chart.
 * All the charts are dynamic and it will change if the data is updated.
 * Then a Blogs page of writing from different peoples.
-* An About page at the last where I leaves it empty because it's easier to show 404 page. That's why i couldn't connect any element with that path. 
+* An About page at the last where I leave it empty because it's easier to show 404 page. That's why i couldn't connect any element with that path. 
+* And the last this website is semi responsive. I completed it with vanilla CSS.
 
 
 
