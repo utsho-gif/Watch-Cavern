@@ -109,7 +109,7 @@ const Dashboard = () => {
         </RadialBarChart>
       </div>
       <div className="p-5">
-        <h3 className="text-danger">Yearly Dashboard</h3>
+        <h3 className="text-danger mb-4">Yearly Dashboard</h3>
         <BarChart width={730} height={250} data={datas}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />

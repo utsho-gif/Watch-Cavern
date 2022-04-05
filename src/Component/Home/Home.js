@@ -16,14 +16,12 @@ const Home = () => {
       <div className="container mb-4">
         <div className="details-container me-5">
           <h1>
-            <span className="text-danger">Watch</span> Dean
+            <span className="text-danger">Watch</span> Cavern.
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo porro
-            asperiores error voluptatum natus nisi molestias iste ratione
-            blanditiis omnis nobis corrupti velit, architecto doloremque
-            laudantium saepe, id sapiente quasi.
-          </p>
+          <h4>
+            At WatchCavern, we can guarantee you will find more watch brands than
+            anywhere else.
+          </h4>
           <button className="btn btn-outline-dark">Live Demo</button>
         </div>
         <div className="image-container">
